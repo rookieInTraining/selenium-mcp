@@ -28,9 +28,9 @@ public class WebElementService {
             By inputElement = SeleniumLocatorBuilder.getLocator(locatorStrategy, webElement);
             WebElement located_input_element = driver.findElement(inputElement);
 
-            return new SeleniumMCPResponse(true, "Element found! : " + located_input_element);
+            return new SeleniumMCPResponse(sessionId, true, "Element found! : " + located_input_element);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to find the expected element. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to find the expected element. Cause : " + e);
         }
     }
 
@@ -45,9 +45,9 @@ public class WebElementService {
             By inputElement = SeleniumLocatorBuilder.getLocator(locatorStrategy, webElement);
             List<WebElement> located_input_element = driver.findElements(inputElement);
 
-            return new SeleniumMCPResponse(true, "Element found! : " + located_input_element);
+            return new SeleniumMCPResponse(sessionId, true, "Element found! : " + located_input_element);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to find the expected element. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to find the expected element. Cause : " + e);
         }
     }
 
@@ -64,9 +64,9 @@ public class WebElementService {
             WebElement located_input_element = driver.findElement(inputElement);
             String attributeValue = located_input_element.getDomAttribute(attributeName);
 
-            return new SeleniumMCPResponse(true, "Value of the Element found! : " + attributeValue);
+            return new SeleniumMCPResponse(sessionId, true, "Value of the Element found! : " + attributeValue);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to find the expected element. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to find the expected element. Cause : " + e);
         }
     }
 

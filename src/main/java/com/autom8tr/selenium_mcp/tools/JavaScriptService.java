@@ -26,9 +26,9 @@ public class JavaScriptService {
             WebDriver driver = (WebDriver) getDriver(sessionId);
             Object result = ((JavascriptExecutor) driver).executeScript(script);
 
-            return new SeleniumMCPResponse(true, "Successfully executed js with result : " + result);
+            return new SeleniumMCPResponse(sessionId, true, "Successfully executed js with result : " + result);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to execute the js script. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to execute the js script. Cause : " + e);
         }
     }
 
@@ -41,9 +41,9 @@ public class JavaScriptService {
             WebDriver driver = (WebDriver) getDriver(sessionId);
             Object result = ((JavascriptExecutor) driver).executeAsyncScript(script);
 
-            return new SeleniumMCPResponse(true, "Successfully executed js with result : " + result);
+            return new SeleniumMCPResponse(sessionId, true, "Successfully executed js with result : " + result);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to execute the js script. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to execute the js script. Cause : " + e);
         }
     }
 
@@ -55,9 +55,9 @@ public class JavaScriptService {
             WebDriver driver = (WebDriver) getDriver(sessionId);
             String htmlPage = (String) ((JavascriptExecutor) driver).executeScript("return document.querySelector('*')");
 
-            return new SeleniumMCPResponse(true, htmlPage);
+            return new SeleniumMCPResponse(sessionId, true, htmlPage);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to find page html. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to find page html. Cause : " + e);
         }
     }
 
