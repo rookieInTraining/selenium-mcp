@@ -1,6 +1,7 @@
 package com.autom8tr.selenium_mcp.tools.cdp;
 
 import com.autom8tr.selenium_mcp.core.SeleniumMCPResponse;
+import com.google.gson.Gson;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
@@ -24,7 +25,7 @@ public class BrowserService {
         try (DevTools devTools = ((HasDevTools) driver).getDevTools()) {
             devTools.createSessionIfThereIsNotOne();
             Browser.GetVersionResponse getVersionResponse = devTools.send(Browser.getVersion());
-            return new SeleniumMCPResponse(sessionId, true, "Browser Details : \n" + getVersionResponse.toString());
+            return new SeleniumMCPResponse(sessionId, true, "Browser Details : \n" + new Gson().toJson(getVersionResponse));
         } catch (Exception e) {
             return new SeleniumMCPResponse(sessionId, false, "Unable to find the expected element. Cause : " + e);
         }
