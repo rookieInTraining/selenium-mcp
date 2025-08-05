@@ -53,7 +53,7 @@ public class JavaScriptService {
     ) {
         try {
             WebDriver driver = (WebDriver) getDriver(sessionId);
-            String htmlPage = (String) ((JavascriptExecutor) driver).executeScript("return document.querySelector('*')");
+            String htmlPage = (String) ((JavascriptExecutor) driver).executeScript("return document.querySelector('*').innerHTML");
 
             return new SeleniumMCPResponse(sessionId, true, htmlPage);
         } catch (Exception e) {

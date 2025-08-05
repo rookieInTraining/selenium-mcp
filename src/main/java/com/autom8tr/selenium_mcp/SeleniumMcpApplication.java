@@ -23,7 +23,8 @@ public class SeleniumMcpApplication {
 			PointerActionsService pointerActionsService,
 			KeyboardActionsService keyService,
 			BrowserService browserService,
-			NetworkService networkService
+			NetworkService networkService,
+            JavaScriptService jsService
 	) {
 		return  MethodToolCallbackProvider.builder()
 					.toolObjects(
@@ -32,7 +33,8 @@ public class SeleniumMcpApplication {
 							pointerActionsService,
 							keyService,
 							browserService,
-							networkService
+							networkService,
+                            jsService
 					)
 					.build();
 	}
