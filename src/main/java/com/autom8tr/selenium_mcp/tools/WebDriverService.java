@@ -26,7 +26,16 @@ public class WebDriverService {
             WebDrivers deviceDriver = AbstractWebDriverFactory.getDeviceDriver(driverType);
             WebDriver driver = deviceDriver.getDriver(device);
             sessions.put(sessionId, driver);
-            return new SeleniumMCPResponse(true, "Initialized browser session: " + sessionId);
+            return new SeleniumMCPResponse(sessionId,  true, "Initialized browser session: " + sessionId);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Tool(description = "Creates a new session of the browser")
+    public SeleniumMCPResponse get_sessions() {
+        try {
+            return new SeleniumMCPResponse(true, sessions.toString());
         } catch (Exception e) {
             throw e;
         }
@@ -40,9 +49,9 @@ public class WebDriverService {
         try {
             WebDriver driver = (WebDriver) SeleniumSessionContainer.getDriver(sessionId);
             driver.navigate().to(url);
-            return new SeleniumMCPResponse(true, "Navigated to: " + url);
+            return new SeleniumMCPResponse(sessionId, true, "Navigated to: " + url);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Navigation failed: " + e.getMessage());
+            return new SeleniumMCPResponse(sessionId, false, "Navigation failed: " + e.getMessage());
         }
     }
 
@@ -53,9 +62,9 @@ public class WebDriverService {
         try {
             WebDriver driver = (WebDriver) SeleniumSessionContainer.getDriver(sessionId);
             String ps = driver.getPageSource();
-            return new SeleniumMCPResponse(true, ps);
+            return new SeleniumMCPResponse(sessionId, true, ps);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to fetch the page source");
+            return new SeleniumMCPResponse(sessionId, false, "Unable to fetch the page source");
         }
     }
 
@@ -66,10 +75,10 @@ public class WebDriverService {
         try {
             WebDriver driver = (WebDriver) SeleniumSessionContainer.getDriver(sessionId);
             driver.quit();
-            return new SeleniumMCPResponse(true, "Successfully exited the browser");
+            return new SeleniumMCPResponse(sessionId, true, "Successfully exited the browser");
         } catch (Exception e) {
             System.err.println(e);
-            return new SeleniumMCPResponse(false, "Unable to close the session or Session not found");
+            return new SeleniumMCPResponse(sessionId, false, "Unable to close the session or Session not found");
         }
     }
 

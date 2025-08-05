@@ -28,9 +28,9 @@ public class PointerActionsService {
             WebElement located_input_element = driver.findElement(inputElement);
             located_input_element.click();
 
-            return new SeleniumMCPResponse(true, "Successfully clicked the WebElement : " + located_input_element);
+            return new SeleniumMCPResponse(sessionId, true, "Successfully clicked the WebElement : " + located_input_element);
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to click the expected element. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to click the expected element. Cause : " + e);
         }
     }
 

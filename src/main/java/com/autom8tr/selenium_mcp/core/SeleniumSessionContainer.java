@@ -14,7 +14,7 @@ public class SeleniumSessionContainer {
     public static Object getDriver(UUID sessionId) {
         WebDriver wD = sessions.get(sessionId);
         if (Objects.isNull(wD)) {
-            return new SeleniumMCPResponse(false,  "Session not found. Please create a session first using browser_init()");
+            return new SeleniumMCPResponse(sessionId, false,  "Session not found. Please create a session first using browser_init()");
         }
 
         return wD;

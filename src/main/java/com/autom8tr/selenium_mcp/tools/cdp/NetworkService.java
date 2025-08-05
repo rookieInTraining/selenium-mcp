@@ -38,9 +38,9 @@ public class NetworkService {
                     Optional.of(maxPostDataSize),
                     Optional.of(reportDirectSocketTraffic)
             );
-            return new SeleniumMCPResponse(true, "CDP for Network enabled!");
+            return new SeleniumMCPResponse(sessionId, true, "CDP for Network enabled!");
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to enable CDP. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to enable CDP. Cause : " + e);
         }
     }
 
@@ -52,9 +52,9 @@ public class NetworkService {
         try (DevTools devTools = ((HasDevTools) driver).getDevTools()) {
             devTools.createSessionIfThereIsNotOne();
             List<Cookie> cookies = devTools.send(Network.getAllCookies());
-            return new SeleniumMCPResponse(true, "Browser Cookies : \n" + Arrays.asList(cookies));
+            return new SeleniumMCPResponse(sessionId, true, "Browser Cookies : \n" + Arrays.asList(cookies));
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to execute CDP request. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to execute CDP request. Cause : " + e);
         }
     }
 
@@ -66,9 +66,9 @@ public class NetworkService {
         try (DevTools devTools = ((HasDevTools) driver).getDevTools()) {
             devTools.createSessionIfThereIsNotOne();
             Network.disable();
-            return new SeleniumMCPResponse(true, "CDP for Network disabled!");
+            return new SeleniumMCPResponse(sessionId, true, "CDP for Network disabled!");
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to execute CDP request. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to execute CDP request. Cause : " + e);
         }
     }
 

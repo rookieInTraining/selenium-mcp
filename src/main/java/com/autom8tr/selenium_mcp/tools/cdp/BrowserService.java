@@ -24,9 +24,9 @@ public class BrowserService {
         try (DevTools devTools = ((HasDevTools) driver).getDevTools()) {
             devTools.createSessionIfThereIsNotOne();
             Browser.GetVersionResponse getVersionResponse = devTools.send(Browser.getVersion());
-            return new SeleniumMCPResponse(true, "Browser Details : \n" + getVersionResponse.toString());
+            return new SeleniumMCPResponse(sessionId, true, "Browser Details : \n" + getVersionResponse.toString());
         } catch (Exception e) {
-            return new SeleniumMCPResponse(false, "Unable to find the expected element. Cause : " + e);
+            return new SeleniumMCPResponse(sessionId, false, "Unable to find the expected element. Cause : " + e);
         }
     }
 
