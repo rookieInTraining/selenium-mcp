@@ -1,4 +1,4 @@
-package com.autom8tr.selenium_mcp.lenium;
+package com.autom8tr.selenium_mcp.sulphur;
 
 import org.openqa.selenium.WebDriver;
 

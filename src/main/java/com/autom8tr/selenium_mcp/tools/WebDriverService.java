@@ -2,8 +2,8 @@ package com.autom8tr.selenium_mcp.tools;
 
 import com.autom8tr.selenium_mcp.core.SeleniumMCPResponse;
 import com.autom8tr.selenium_mcp.core.SeleniumSessionContainer;
-import com.autom8tr.selenium_mcp.lenium.AbstractWebDriverFactory;
-import com.autom8tr.selenium_mcp.lenium.WebDrivers;
+import com.autom8tr.selenium_mcp.sulphur.AbstractWebDriverFactory;
+import com.autom8tr.selenium_mcp.sulphur.WebDrivers;
 import org.openqa.selenium.WebDriver;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;

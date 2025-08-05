@@ -1,6 +1,5 @@
-package com.autom8tr.selenium_mcp.lenium;
+package com.autom8tr.selenium_mcp.sulphur;
 
-import com.autom8tr.selenium_mcp.core.SeleniumMCPResponse;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -10,9 +9,6 @@ import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.remote.Augmenter;
 
 import java.io.File;
-import java.util.UUID;
-
-import static com.autom8tr.selenium_mcp.core.SeleniumSessionContainer.sessions;
 
 public class SeleniumWebDriverFactory implements WebDrivers{
 
