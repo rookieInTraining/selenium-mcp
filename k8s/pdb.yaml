@@ -1,0 +1,14 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: selenium-mcp
+  namespace: selenium-mcp
+  labels:
+    app.kubernetes.io/name: selenium-mcp
+    app.kubernetes.io/component: pdb
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: selenium-mcp
+

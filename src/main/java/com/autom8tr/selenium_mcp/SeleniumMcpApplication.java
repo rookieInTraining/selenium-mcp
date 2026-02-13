@@ -8,8 +8,10 @@ import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class SeleniumMcpApplication {
 
 	public static void main(String[] args) {
@@ -24,19 +26,18 @@ public class SeleniumMcpApplication {
 			KeyboardActionsService keyService,
 			BrowserService browserService,
 			NetworkService networkService,
-            JavaScriptService jsService
+			JavaScriptService jsService
 	) {
-		return  MethodToolCallbackProvider.builder()
-					.toolObjects(
-							wDService,
-							wEService,
-							pointerActionsService,
-							keyService,
-							browserService,
-							networkService,
-                            jsService
-					)
-					.build();
+		return MethodToolCallbackProvider.builder()
+				.toolObjects(
+						wDService,
+						wEService,
+						pointerActionsService,
+						keyService,
+						browserService,
+						networkService,
+						jsService
+				)
+				.build();
 	}
-
 }

@@ -1,0 +1,103 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.5.4'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.autom8tr'
+version = '0.0.2-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+	// Add Maven Central snapshots if needed
+	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+ext {
+	set('springAiVersion', "1.0.1")
+	// Try to use a newer MCP SDK version if available
+	set('mcpSdkVersion', "0.10.0") // Update this if newer version exists
+}
+
+dependencies {
+	// Selenium WebDriver
+	implementation 'org.seleniumhq.selenium:selenium-java:4.34.0'
+
+	// WebDriverManager for automatic driver management (optional fallback)
+	implementation 'io.github.bonigarcia:webdrivermanager:6.0.0'
+
+	// Spring AI MCP Server
+	implementation 'org.springframework.ai:spring-ai-starter-mcp-server-webmvc'
+	
+	// ATTEMPT: Override MCP SDK version (if newer version available)
+	// Uncomment these lines if you find a newer version:
+	// implementation("io.modelcontextprotocol.sdk:mcp:${mcpSdkVersion}") {
+	//     force = true
+	// }
+	// implementation("io.modelcontextprotocol.sdk:mcp-spring-webmvc:${mcpSdkVersion}") {
+	//     force = true
+	// }
+
+	// Spring Boot Actuator for health checks and metrics
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// Micrometer Prometheus for metrics export
+	implementation 'io.micrometer:micrometer-registry-prometheus'
+
+	// Redis for distributed session management
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'io.lettuce:lettuce-core'
+
+	// Caffeine for local caching
+	implementation 'com.github.ben-manes.caffeine:caffeine:3.1.8'
+
+	// Gson for JSON serialization
+	implementation 'com.google.code.gson:gson:2.11.0'
+
+	// Rate limiting - using the latest bucket4j
+	implementation 'com.bucket4j:bucket4j-core:8.10.1'
+
+	// Micrometer Tracing for distributed tracing
+	implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+	implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+
+	// Testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Embedded Redis for testing
+	testImplementation('it.ozimov:embedded-redis:0.7.3') {
+		exclude group: 'org.slf4j', module: 'slf4j-simple'
+	}
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+// Configure bootJar
+bootJar {
+	archiveFileName = 'selenium-mcp.jar'
+	layered {
+		enabled = true
+	}
+}
+
+// Configure jar
+jar {
+	enabled = false
+}
+

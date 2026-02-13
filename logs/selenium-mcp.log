@@ -1,0 +1,175 @@
+2026-01-28 15:19:14 [main] INFO  c.a.s.SeleniumMcpApplication - Starting SeleniumMcpApplication using Java 21.0.3 with PID 20876 (/Users/ishabbi/mcp-servers/selenium-mcp/build/classes/java/main started by ishabbi in /Users/ishabbi/mcp-servers/selenium-mcp)
+2026-01-28 15:19:14 [main] INFO  c.a.s.SeleniumMcpApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 15:19:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-28 15:19:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-28 15:19:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-01-28 15:19:14 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-01-28 15:19:14 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'serverAnnotatedBeanRegistry' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration$ServerMcpAnnotatedBeans] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-01-28 15:19:14 [main] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.ai.mcp.server.annotation-scanner-org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-01-28 15:19:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7676 (http)
+2026-01-28 15:19:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-28 15:19:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-01-28 15:19:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-28 15:19:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 961 ms
+2026-01-28 15:19:15 [main] INFO  c.a.selenium_mcp.config.RedisConfig - Creating in-memory session storage (standalone mode)
+2026-01-28 15:19:15 [main] INFO  c.a.s.core.SeleniumSessionContainer - Initialized SeleniumSessionContainer with InMemorySessionStorage storage, maxSessions=100, ttl=PT30M
+2026-01-28 15:19:15 [main] INFO  c.a.s.config.GracefulShutdownConfig - Graceful shutdown handler initialized
+2026-01-28 15:19:15 [main] INFO  c.a.s.config.RateLimitConfig - Initialized global rate limiter: 1000 requests/minute
+2026-01-28 15:19:15 [main] INFO  c.a.s.config.RateLimitConfig - Initialized global rate limiter: 1000 requests/minute
+2026-01-28 15:19:15 [main] INFO  c.a.s.metrics.SeleniumMetrics - Selenium metrics initialized
+2026-01-28 15:19:15 [main] INFO  c.a.selenium_mcp.config.AsyncConfig - Async task executor initialized: corePoolSize=4, maxPoolSize=10
+2026-01-28 15:19:15 [main] WARN  o.s.m.p.tool.SyncMcpToolProvider - No tool methods found in the provided tool objects: []
+2026-01-28 15:19:15 [main] INFO  o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2026-01-28 15:19:15 [main] INFO  o.s.a.m.s.c.a.McpServerAutoConfiguration - Registered tools: 45
+2026-01-28 15:19:15 [main] INFO  o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2026-01-28 15:19:15 [main] INFO  o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable resources templates capabilities, notification: true
+2026-01-28 15:19:15 [main] INFO  o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2026-01-28 15:19:15 [main] INFO  o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable completions capabilities
+2026-01-28 15:19:16 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-01-28 15:19:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7676 (http) with context path '/'
+2026-01-28 15:19:16 [main] INFO  c.a.s.SeleniumMcpApplication - Started SeleniumMcpApplication in 2.38 seconds (process running for 2.808)
+2026-01-28 15:19:24 [http-nio-7676-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-28 15:19:24 [http-nio-7676-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-28 15:19:24 [http-nio-7676-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-01-28 15:19:25 [http-nio-7676-exec-4] INFO  i.m.server.McpAsyncServer - Client initialize request - Protocol: 2025-11-25, Capabilities: ClientCapabilities[experimental=null, roots=RootCapabilities[listChanged=false], sampling=null, elicitation=Elicitation[]], Info: Implementation[name=cursor-vscode, title=null, version=1.0.0]
+2026-01-28 15:19:25 [http-nio-7676-exec-4] WARN  i.m.server.McpAsyncServer - Client requested unsupported protocol version: 2025-11-25, so the server will suggest the 2024-11-05 version instead
+2026-01-28 15:25:24 [http-nio-7676-exec-7] INFO  c.a.s.tools.WebDriverService - Initializing browser session: device=desktop, browser=firefox
+2026-01-28 15:25:24 [http-nio-7676-exec-7] INFO  c.a.s.s.SeleniumWebDriverFactory - Creating WebDriver for browser: firefox (headless: false)
+2026-01-28 15:25:49 [http-nio-7676-exec-7] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.36.0 (resolved driver for Firefox 147)
+2026-01-28 15:25:49 [http-nio-7676-exec-7] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/ishabbi/.cache/selenium/geckodriver/mac-arm64/0.36.0/geckodriver
+2026-01-28 15:25:53 [http-nio-7676-exec-7] INFO  c.a.s.s.SeleniumWebDriverFactory - WebDriver created successfully for browser: firefox
+2026-01-28 15:25:53 [http-nio-7676-exec-7] INFO  c.a.s.core.SeleniumSessionContainer - Created session: 3afbb29d-997e-4cae-8557-5802232119f5 (browser: firefox, device: desktop). Total active sessions: 1
+2026-01-28 15:25:53 [http-nio-7676-exec-7] INFO  c.a.s.tools.WebDriverService - Browser session initialized successfully: 3afbb29d-997e-4cae-8557-5802232119f5
+2026-01-28 15:26:01 [http-nio-7676-exec-9] INFO  c.a.s.tools.WebDriverService - Session 3afbb29d-997e-4cae-8557-5802232119f5 navigated to: https://www.makemytrip.com/
+2026-01-28 15:27:11 [http-nio-7676-exec-9] ERROR c.a.s.tools.KeyboardActionsService - Error clearing and typing for session 3afbb29d-997e-4cae-8557-5802232119f5
+org.openqa.selenium.InvalidElementStateException: Element is read-only: <input id="city" class="hsw_inputField lineHeight36 latoBlack font32" type="text">
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.7.6', java.version: '21.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [be6cba69-416c-461a-9fa9-430d7103ec17, clearElement {id=68151f7a-e715-4ae8-a28f-ee83841b8dd3}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 23.6.0, moz:processID: 28444, moz:profile: /var/folders/cg/bmkb6hcs2tz..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (be6cba69-416c-461a-9fa9-430d7103ec17)] -> xpath: //input[@placeholder='Enter city/ Hotel/ Area/ Building'] | //input[contains(@class, 'react-autosuggest__input')] | //input[@type='text' and contains(@class, 'input')]]
+Session ID: be6cba69-416c-461a-9fa9-430d7103ec17
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+	at com.autom8tr.selenium_mcp.tools.KeyboardActionsService.clear_and_type(KeyboardActionsService.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.ai.tool.method.MethodToolCallback.callMethod(MethodToolCallback.java:166)
+	at org.springframework.ai.tool.method.MethodToolCallback.call(MethodToolCallback.java:109)
+	at org.springframework.ai.mcp.McpToolUtils.lambda$toSharedSyncToolSpecification$5(McpToolUtils.java:260)
+	at org.springframework.ai.mcp.McpToolUtils.lambda$toSyncToolSpecification$3(McpToolUtils.java:208)
+	at io.modelcontextprotocol.server.McpServerFeatures$AsyncToolSpecification.lambda$fromSync$3(McpServerFeatures.java:260)
+	at reactor.core.publisher.MonoCallable.call(MonoCallable.java:72)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:146)
+	at reactor.core.publisher.Operators$MonoInnerProducerBase.complete(Operators.java:2834)
+	at reactor.core.publisher.SinkOneMulticast.subscribe(SinkOneMulticast.java:101)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.Mono.block(Mono.java:1778)
+	at io.modelcontextprotocol.server.transport.WebMvcSseServerTransportProvider.handleMessage(WebMvcSseServerTransportProvider.java:329)
+	at org.springframework.web.servlet.function.support.HandlerFunctionAdapter.handle(HandlerFunctionAdapter.java:108)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-28 15:29:16 [http-nio-7676-exec-4] INFO  c.a.s.core.SeleniumSessionContainer - Removed and closed session: 3afbb29d-997e-4cae-8557-5802232119f5. Remaining sessions: 0
+2026-01-28 15:29:16 [http-nio-7676-exec-4] INFO  c.a.s.tools.WebDriverService - Browser session closed: 3afbb29d-997e-4cae-8557-5802232119f5
+2026-01-28 17:11:47 [selenium-shutdown-hook] INFO  c.a.s.config.GracefulShutdownConfig - Shutdown hook triggered - cleaning up sessions
+2026-01-28 17:11:47 [selenium-shutdown-hook] INFO  c.a.s.config.GracefulShutdownConfig - No active sessions to close
+2026-01-28 17:11:47 [SpringApplicationShutdownHook] INFO  c.a.s.config.GracefulShutdownConfig - Application context closing - initiating graceful shutdown
+2026-01-28 17:11:47 [SpringApplicationShutdownHook] INFO  c.a.s.config.GracefulShutdownConfig - No active sessions to close
+2026-01-28 17:11:47 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-28 17:12:17 [SpringApplicationShutdownHook] INFO  o.s.c.s.DefaultLifecycleProcessor - Shutdown phase 2147482623 ends with 1 bean still running after timeout of 30000ms: [webServerGracefulShutdown]
+2026-01-28 17:12:17 [http-nio-7676-exec-19] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-19] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-17] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-17] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-16] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-11] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-11] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-12] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-15] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-12] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-15] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-18] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-18] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-16] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-13] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-13] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-14] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2026-01-28 17:12:17 [http-nio-7676-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-14] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2026-01-28 17:12:17 [http-nio-7676-exec-10] ERROR i.m.s.t.WebMvcSseServerTransportProvider - Error handling message: java.lang.InterruptedException
+2026-01-28 17:12:17 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown aborted with one or more requests still active
+2026-01-28 17:12:18 [SpringApplicationShutdownHook] WARN  i.m.s.t.WebMvcSseServerTransportProvider - Failed to complete SSE builder for session 93cd57f0-3656-47d0-80e8-8183a640bd11: The response object has been recycled and is no longer associated with this facade
